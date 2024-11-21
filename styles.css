@@ -7,12 +7,17 @@ body {
     color: #000000; /* Black text */
     text-align: center;
     line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    /* Stylish Black and White Artistic Background with Dynamic Brush Strokes */
+    background: #ffffff;
     background-image: 
-        linear-gradient(135deg, transparent 74%, rgba(0, 0, 0, 0.3) 75%),
-        linear-gradient(45deg, transparent 74%, rgba(0, 0, 0, 0.3) 75%);
-    background-size: 60px 60px; /* Thin brush strokes */
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%), 
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+    background-size: 60px 60px, 60px 60px;
     background-position: 0 0, 30px 30px;
     background-repeat: repeat;
+    transition: background 1s ease;
 }
 
 /* Header Section */
@@ -23,7 +28,7 @@ header {
 }
 
 header .logo img {
-    width: 325px; /* 30% larger logo size */
+    width: 400px; /* 30% larger logo size */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -35,35 +40,38 @@ header .logo img:hover {
     filter: brightness(1.6); /* Brighter glow on hover */
 }
 
-/* Section Styles */
-main section {
-    padding: 60px 20px;
-    border-bottom: 1px solid #000000; /* Black divider between sections */
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
     background-color: #ffffff;
 }
 
-main section:last-child {
-    border-bottom: none;
+.hero h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+/* Collection Section */
+.collection {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.collection h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: 700;
     text-transform: uppercase;
     color: #000000;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light text shadow for depth */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-p {
-    font-size: 1.1rem;
-    margin: 0 auto;
-    max-width: 700px;
-    color: #333333; /* Soft black for readability */
-}
-
-/* Collection Gallery */
 .collection-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +93,19 @@ p {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
+/* About Us Section */
+.about {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #333333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* To Enquire Section */
 .enquire {
     margin-top: 40px;
@@ -97,7 +118,7 @@ p {
 }
 
 .enquire p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 10px 0;
     color: #333333;
 }
@@ -106,6 +127,8 @@ p {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1rem;
 }
 
 .enquire a:hover {
@@ -118,4 +141,17 @@ footer {
     font-size: 0.9rem;
     background-color: #000000; /* Black footer */
     color: #ffffff;
+}
+
+/* Custom Background Pattern for Brush Strokes (Black on White) */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/brush-strokes.png') repeat;
+    z-index: -1;
+    opacity: 0.2;
 }
