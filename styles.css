@@ -11,13 +11,13 @@ body {
 
 /* Header Section */
 header {
-    padding: 30px;
+    padding: 50px 20px;
     background-color: #ffffff; /* Crisp white background */
     border-bottom: 2px solid #000; /* Black border */
 }
 
 header .logo img {
-    width: 120px;
+    width: 180px; /* Larger size for the logo */
     height: auto;
     display: block;
     margin: 0 auto;
