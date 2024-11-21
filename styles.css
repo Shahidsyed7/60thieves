@@ -21,7 +21,7 @@ header {
 }
 
 header .logo img {
-    width: 250px; /* Larger logo size for prominence */
+    width: 325px; /* 30% larger logo size */
     height: auto;
     display: block;
     margin: 0 auto;
