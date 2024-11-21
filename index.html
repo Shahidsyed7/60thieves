@@ -1,53 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60thieves</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700;900&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="https://github.com/Shahidsyed7/60thieves/blob/main/photo_6194818570576314589_y.jpg?raw=true" type="image/x-icon">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="https://github.com/Shahidsyed7/60thieves/blob/main/photo_6194818570576314589_y.jpg?raw=true" alt="60thieves Logo">
-        </div>
-    </header>
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    background: #ffffff; /* White background */
+    background-image: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.2) 25%, transparent 25%), 
+        linear-gradient(225deg, rgba(0, 0, 0, 0.2) 25%, transparent 25%), 
+        url('https://www.transparenttextures.com/patterns/black-linen.png');
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    background-color: #ffffff;
+    color: #000000; /* Black text */
+    text-align: center;
+    line-height: 1.6;
+}
 
-    <main>
-        <section class="about">
-            <h2>About Us</h2>
-            <p>At 60 Thieves, we offer premium, vintage-inspired jeans in bulk for wholesalers. Our focus is on timeless style and top-quality, helping you Steal the Style.</p>
-        </section>
+/* Header Section */
+header {
+    padding: 80px 20px;
+    background-color: #ffffff; /* White background for the header */
+    border-bottom: 2px solid #000000; /* Black bottom border */
+}
 
-        <section class="collection">
-            <h2>Our Collection</h2>
-            <div class="collection-gallery">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic1.jpg?raw=true" alt="Collection 1">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic3.jpg?raw=true" alt="Collection 2">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic2.jpg?raw=true" alt="Collection 3">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic4.jpg?raw=true" alt="Collection 4">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic5.jpg?raw=true" alt="Collection 5">
-                <img src="https://github.com/Shahidsyed7/60thieves/blob/main/pic6.jpg?raw=true" alt="Collection 6">
-            </div>
-            <p>Elevating your style with premium jeans that offer perfect comfort and a timeless look.</p>
-        </section>
+header .logo img {
+    width: 325px; /* 30% larger logo size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(1.4); /* Subtle glow effect for the logo */
+    transition: filter 0.3s ease-in-out;
+}
 
-        <section class="enquire">
-            <h2>To Enquire</h2>
-            <div class="enquire-content">
-                <p>Email us at <a href="mailto:60thievess@gmail.com">60thievess@gmail.com</a></p>
-                <p>Follow us on <a href="https://www.instagram.com/60thieves/profilecard/?igsh=MW9ueXRrZGFxbjl3Zg==" target="_blank">Instagram</a>.</p>
-            </div>
-        </section>
-    </main>
+header .logo img:hover {
+    filter: brightness(1.6); /* Brighter glow on hover */
+}
 
-    <footer>
-        <p>&copy; 2024 60thieves. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+/* Section Styles */
+main section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #000000; /* Black divider between sections */
+    background-color: #ffffff;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light text shadow for depth */
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 700px;
+    color: #333333; /* Soft black for readability */
+}
+
+/* Collection Gallery */
+.collection-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.collection-gallery img {
+    width: 250px;
+    height: auto;
+    border: 4px solid #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* To Enquire Section */
+.enquire {
+    margin-top: 40px;
+}
+
+.enquire-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enquire p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #333333;
+}
+
+.enquire a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enquire a:hover {
+    color: #666666;
+}
+
+/* Footer */
+footer {
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    background-color: #000000; /* Black footer */
+    color: #ffffff;
+}
+
+/* Black Brush Stroke Background */
+body {
+    background-image: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.4) 25%, transparent 25%), 
+        linear-gradient(225deg, rgba(0, 0, 0, 0.4) 25%, transparent 25%), 
+        url('https://www.transparenttextures.com/patterns/black-linen.png');
+    background-size: 100px 100px; /* Larger size for brush strokes */
+    background-position: 0 0, 25px 25px;
+    background-color: #ffffff;
+}
